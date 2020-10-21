@@ -1,6 +1,6 @@
 {
     "name": "starter-kit",
-    "description": "A simple static site / pwa boilerplate using nunjunks for HTML templating, esbuild for JS transpilation and CSS variables.",
+    "description": "A simple static site / PWA boilerplate using nunjunks for HTML templating, esbuild for JS transpilation and CSS variables.",
     "version": "1.0.0",
     "author": {
         "name": "Jonathon Toon",

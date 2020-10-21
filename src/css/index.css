@@ -6,5 +6,6 @@
 @import url("variables.css");
 
 body {
-    background-color: var(--black);
+    background-color: var(--gray-300);
+    color: var(--black);
 }
