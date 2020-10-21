@@ -1,0 +1,143 @@
+<!-- base.html -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=5">
+		<meta name="author" content="WEBSITE_NAME">
+		<meta name="description" content="WEBSITE_DESCRIPTION">
+        <meta name="keywords" content="WEBSITE_KEYWORDS">
+
+        <title>
+            {{ title }}
+        </title>
+
+		<!-- Android Config  -->
+		<meta name="theme-color" content="#000000">
+		<meta name="mobile-web-app-capable" content="yes">
+
+		<!-- Mobile Safari Config -->
+		<meta name="apple-mobile-web-app-title" content="MOBILE_SAFARI_TITLE">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<!-- Windows Config  -->
+		<meta name="application-name" content="WINDOWS_TITLE">
+		<meta name="msapplication-tooltip" content="WINDOWS_DESCRIPTION">
+		<meta name="msapplication-starturl" content="/">
+		<meta name="msapplication-navbutton-color" content="#000000">
+		<meta name="msapplication-TileColor" content="#000000">
+		<meta name="msapplication-config" content="browserconfig.xml">
+		<meta name="msapplication-TileImage" content="images/favicon-144.png">
+		<meta name="msapplication-tap-highlight" content="no">
+
+		<!-- UC Mobile Browser -->
+		<meta name="full-screen" content="yes">
+		<meta name="browsermode" content="application">
+
+		<!-- Facebook Open Graph -->
+		<meta property="og:title" content="OPEN_GRAPH_TITLE">
+		<meta property="og:description" content="OPEN_GRAPH_DESCRIPTION">
+		<meta property="og:image" content="OPEN_GRAPH_IMAGE">
+
+		<!-- Twitter Cards -->
+		<meta name="twitter:card" content="CARD_SUMMARY">
+		<meta name="twitter:site" content="@WEBSITE_ACCOUNT">
+		<meta name="twitter:creator" content="@INDIVIDUAL_ACCOUNT">
+		<meta name="twitter:url" content="WEBSITE_URL">
+		<meta name="twitter:title" content="WEBSITE_TITLE">
+		<meta name="twitter:description" content="WEBSITE_DESCRIPTION">
+		<meta name="twitter:image" content="WEBSITE_IMAGE">
+
+		<!-- Icon Images -->
+		<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+		<link rel="mask-icon" size="any" color="#000000" href="images/favicon.svg">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+		<link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png">
+		<link rel="icon" type="image/png" sizes="57x57" href="images/favicon-57.png">
+		<link rel="icon" type="image/png" sizes="76x76" href="images/favicon-76.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96.png">
+		<link rel="icon" type="image/png" sizes="128x128" href="images/favicon-128.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+		<link rel="icon" type="image/png" sizes="228x228" href="images/favicon-228.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="images/favicon-120.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="images/favicon-152.png">
+		<link rel="apple-touch-icon" sizes="167x167" href="images/favicon-167.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-180.png">
+
+		<!-- Web Manifest  -->
+		<link rel="manifest" href="starter-kit.webmanifest">
+
+		<!-- Misc -->	
+		<link rel="canonical" href="WEBSITE_URL">
+		<link rel="shortlink" href="WEBSITE_URL">
+	    <link rel="sitemap" type="application/xml" title="sitemap" href="sitemap.xml">
+
+		<!-- CSS -->
+		<link type="text/css" rel="stylesheet" media="all" href="bundle.min.css">
+
+		<!-- Preload Config -->
+		<link rel="dns-prefetch" href="DNS_PREFETCH_URL">
+		<link rel="preconnect" href="WEBSITE_URL">
+		<link rel="prefetch" href="WEBSITE_URL">
+		<link rel="prerender" href="WEBSITE_URL">
+
+		<!-- Preload Images -->
+		<link rel="preload" as="image" href="images/favicon.ico">
+		<link rel="preload" as="image" href="images/favicon.svg">
+		<link rel="preload" as="image" href="images/favicon-16.png">
+		<link rel="preload" as="image" href="images/favicon-32.png">
+		<link rel="preload" as="image" href="images/favicon-48.png">
+		<link rel="preload" as="image" href="images/favicon-57.png">
+		<link rel="preload" as="image" href="images/favicon-76.png">
+		<link rel="preload" as="image" href="images/favicon-96.png">
+		<link rel="preload" as="image" href="images/favicon-128.png">
+		<link rel="preload" as="image" href="images/favicon-192.png">
+		<link rel="preload" as="image" href="images/favicon-228.png">
+		<link rel="preload" as="image" href="images/favicon-120.png">
+		<link rel="preload" as="image" href="images/favicon-152.png">
+		<link rel="preload" as="image" href="images/favicon-167.png">
+		<link rel="preload" as="image" href="images/favicon-180.png">
+
+		<!-- Preload Web Fonts -->
+		<link rel="preload" as="font" href="fonts/fa-solid-900.woff2">
+		<link rel="preload" as="font" href="fonts/Inter-Bold.woff2?v=3.15">
+		<link rel="preload" as="font" href="fonts/Inter-Medium.woff2?v=3.15">
+		<link rel="preload" as="font" href="fonts/Inter-SemiBold.woff2?v=3.15">
+		<link rel="preload" as="font" href="fonts/Inter-Regular.woff2?v=3.15">
+
+		<!-- Preload CSS -->
+		<link rel="preload" as="style" href="bundle.min.css">
+		
+		<!-- Preload Javascript -->
+		<link rel="preload" as="script" href="bundle.min.js">
+	</head>
+	<body class="bg-black sans-serif">
+		{% include "noscript.html" %}
+		{% block content %}{% endblock %}
+		<!-- Javascript -->
+		<script type="text/javascript" src="bundle.min.js"></script>
+
+		{% if isDevelopment %}
+			<script type="text/javascript">
+				if ("serviceWorker" in navigator) {
+					navigator.serviceWorker.register("service-worker.js", { scope: "/" }).then(function (serviceWorker) {
+						console.log("Service Worker registered.");
+						console.log(serviceWorker);
+					}).catch(function (error) {
+						console.log("Error registering the Service Worker.");
+						console.log(error);
+					});
+				}
+			</script>
+		{% else %}
+			<script type="text/javascript">
+				if ("serviceWorker" in navigator) {
+					navigator.serviceWorker.register("service-worker.js", { scope: "/" });
+				}
+			</script>
+		{% endif %}
+  	</body>
+</html>

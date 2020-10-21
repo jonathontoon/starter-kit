@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+      "dbaeumer.vscode-eslint",
+      "ronnidc.nunjucks",
+      "hsnazar.hyper-term-theme",
+      "vscode-icons-team.vscode-icons"
+    ]
+  }

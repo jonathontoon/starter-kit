@@ -1,0 +1,10 @@
+/* Fonts */
+@import url("inter.css");
+/* Normalize */
+@import url("normalize.css");
+/* Variables */
+@import url("variables.css");
+
+body {
+    background-color: var(--black);
+}
