@@ -6,9 +6,9 @@
 const settings = {
   clean: true,
   html: true,
-	javascript: true,
-	stylesheets: true,
-	assets: true,
+	scripts: true,
+	styles: true,
+	static: true,
 	reload: true
 };
 
@@ -25,16 +25,16 @@ const paths = {
     nunjunks: [ "src/views/templates/", "src/views/partials/" ],
     purge: "src/views/**/*.html"
 	},
-  javascript: {
-		input: "src/js/index.js",
+  scripts: {
+		input: "src/scripts/index.js",
 		output: "public/"
 	},
-	stylesheets: {
-		input: "src/css/index.css",
+	styles: {
+		input: "src/styles/index.css",
 		output: "public/"
 	},
-	assets: {
-		input: "src/assets/**/*",
+	static: {
+		input: "src/static/**/*",
 		output: "public/"
 	},
 	reload: "./public/"
@@ -118,7 +118,7 @@ function buildHTML(done) {
 };
 
 // Process javascript to output folder
-function buildJavaScript(done) {
+function buildScripts(done) {
   // Make sure this feature is activated before running
 	if (!settings.javascript) done();
 
@@ -141,7 +141,7 @@ function buildJavaScript(done) {
 }; 
 
 // Process stylesheets to output folder
-function buildStyleSheets(done) {
+function buildStyles(done) {
   // Make sure this feature is activated before running
 	if (!settings.stylesheets) done();
 
@@ -176,13 +176,13 @@ function buildStyleSheets(done) {
 };
 
 // Copy static assets to output folder
-function copyAssets(done) {
+function copyStaticAssets(done) {
   // Make sure this feature is activated before running
-  if (!settings.assets) done();
+  if (!settings.static) done();
   
   // Copy static files
-	return gulp.src(paths.assets.input)
-    .pipe(gulp.dest(paths.assets.output))
+	return gulp.src(paths.static.input)
+    .pipe(gulp.dest(paths.static.output))
 
 };
 
@@ -213,10 +213,10 @@ function startServer(done) {
 const buildTask = gulp.series(
   cleanPublic,
   gulp.parallel(
-    buildStyleSheets,
-    buildJavaScript,
+    buildStyles,
+    buildScripts,
     buildHTML,
-    copyAssets
+    copyStaticAssets
   )
 );
 
