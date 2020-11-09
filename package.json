@@ -33,6 +33,7 @@
         "gulp-esbuild": "^0.0.2",
         "gulp-html-minimizer": "^2.0.1",
         "gulp-import-css": "^0.1.3",
+        "gulp-inline-source": "^4.0.0",
         "gulp-nunjucks-render": "^2.2.3",
         "gulp-postcss": "^9.0.0",
         "gulp-purgecss": "^3.0.0",
