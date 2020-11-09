@@ -1,9 +1,9 @@
-/**
-  Settings
-  Turn on/off build features
-**/
+  /**
+    Settings
+    Turn on/off build features
+  **/
 
-const settings = {
+  const settings = {
     clean: true,
     html: true,
       scripts: true,
@@ -54,6 +54,7 @@ const settings = {
   // HTML
   const nunjucksRender = require("gulp-nunjucks-render");
   const htmlMinimizer = require("gulp-html-minimizer");
+  const inlinesource = require("gulp-inline-source");
   
   // Scripts
   const esbuild = require("gulp-esbuild");
@@ -100,6 +101,9 @@ const settings = {
           },
           path: paths.html.nunjunks,
           watch: false,
+      }))
+      .pipe(inlinesource({
+        rootpath: paths.output
       }))
       .pipe(htmlMinimizer({
         removeComments: true,
@@ -186,6 +190,18 @@ const settings = {
   
   };
   
+  // Remove unused content from output folders
+  function postCleanPublic(done) {
+      // Make sure this feature is activated before running
+      if (!settings.clean) done();
+
+      // Signal completion
+      return del([
+        `${paths.output}/bundle.min.css`,
+        `${paths.output}/bundle.min.js`
+      ]);
+  };
+
   // Watch for changes to the src directory
   function startServer(done) {
       // Make sure this feature is activated before running
@@ -212,12 +228,11 @@ const settings = {
   // Build task
   const buildTask = gulp.series(
     cleanPublic,
-    gulp.parallel(
-      buildStyles,
-      buildScripts,
-      buildHTML,
-      copyStaticAssets
-    )
+    buildStyles,
+    buildScripts,
+    buildHTML,
+    copyStaticAssets,
+    postCleanPublic
   );
   
   // Reload the browser when files change
