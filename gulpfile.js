@@ -20,10 +20,10 @@
       input: "src/",
       output: "public/",
       html: {
-          input: "src/views/pages/*.html",
-        output: "public/",
-        nunjunks: [ "src/views/templates/", "src/views/partials/" ],
-        purge: "src/views/**/*.html"
+          input: "src/views/pages/**/*.html",
+          output: "public/",
+          nunjunks: [ "src/views/templates/", "src/views/partials/" ],
+          purge: "src/views/**/*.html"
       },
       scripts: {
           input: "src/scripts/index.js",
