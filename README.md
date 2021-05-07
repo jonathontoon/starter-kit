@@ -4,7 +4,7 @@ A simple static site / PWA boilerplate using nunjunks for HTML templating, esbui
 
 **Features**
 
-- Concatenate, minify, and lint JavaScript.
+- Concatenate, minify, and lint TypeScript.
 - Compile, minify, autoprefix, and lint CSS.
 - Copy static files and folders into your `public` directory.
 - Automatically add headers and project details to JS and CSS files.

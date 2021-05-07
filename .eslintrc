@@ -1,11 +1,25 @@
 {
-    "extends": "standard",
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+        "eslint:recommended",
+        "standard"
+    ],
     "env": {
         "browser": true
     },
+    "plugins": [
+        "@typescript-eslint"
+    ],
     "rules": {
+        "no-tabs": ["error", { "allowIndentationTabs": true }],
+        "indent": ["error", "tab"],
         "semi": [2, "always"],
         "quotes": [2, "double", { "avoidEscape": true }],
-        "no-trailing-spaces": ["error", { "skipBlankLines": true }]
+        "space-before-function-paren": ["error", {
+            "anonymous": "always",
+            "named": "never",
+            "asyncArrow": "always"
+        }]
     }  
 }

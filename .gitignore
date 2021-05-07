@@ -1,4 +1,6 @@
+/node_modules/
+/public/
+
 .DS_Store
-node_modules
-public/*
-debug.log
+coverage
+*.log
