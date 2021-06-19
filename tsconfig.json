@@ -4,6 +4,7 @@
       "target": "es6",
       "module": "commonjs",
       "moduleResolution": "node",
+      "sourceMap": true,
       "declaration": true,
       "strict": true,
       "removeComments": true,
@@ -24,8 +25,11 @@
         "node",
         "jest"
       ],
+      "typeRoots": [
+        "./node_modules/@types",
+      ],
       "lib": [
-        "ES6",
+        "es2016",
         "DOM"
       ]
     },
